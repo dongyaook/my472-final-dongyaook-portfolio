@@ -1,29 +1,48 @@
-#Information about the data I collected
-[1] olympic_medal_data.csv
-path: rowdata
-source:  Wikipedia Summer Olympics medal table page from 1869 to 2024. e.g. [for 2024](https://en.wikipedia.org/wiki/2024_Summer_Olympics_medal_table#Medal_table)
-authoritative:  According to the annual olympics statistic.e.g. [for 2024]https://olympics.com/en/paris-2024/medals
-licence: https://en.wikipedia.org/robots.txt
+# Olympic Gender Participation and Medal Performance Analysis (1896–2020)
 
+This project presents an integrated analysis of gender participation trends and medal performance in the Summer Olympic Games from 1896 to 2020. It combines multi-source data to explore gender disparities, their historical evolution, and links to broader social development indicators.
 
-[2] athlete_events.csv & noc_regions
-path: rowdata/120-years-of-olympic-history-athletes-and-results
-source:  open dataset in [kaggle](https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results)
-authoritative:  According to  an  American sports statistics company called [Sports Reference, LLC]www.sports-reference.com 
-licence:  https://creativecommons.org/publicdomain/zero/1.0/
+## Project Overview
 
-[3] Olympic_Female_Medals_2020.csv
-path: rowdata
-source: Olympedia(https://www.olympedia.org/) a group of Olympic historians currrently publish in-detph statistics on it-- and, formerly, at the now inactive OlympicsReference website.
+- Tracks the evolution of male and female athlete participation in the Summer Olympics.
+- Analyses gender differences in medal performance across countries and time.
+- Investigates correlations between gender equality in sports and global development indicators, such as the United Nations Gender Inequality Index (GII).
+- Demonstrates an end-to-end data pipeline from acquisition to reproducible reporting.
 
-[4] olympic_participators2020.csv
-path: rowdata
-source: also from Olympedia.(https://www.olympedia.org/)
+## Technical Highlights
 
-[5]hdr-data.json&hdr-data (1).json
-path: rowdat
-source:  human development reports[UNPD](https://hdr.undp.org/data-center/thematic-composite-indices/gender-inequality-index#/indicies/GII)
+- Static web scraping using **CSS selectors** and **XPath** within R.
+- Dynamic web scraping with **Selenium** for interactive websites.
+- Public **API integration** to enrich datasets.
+- Relational database management and querying with **SQLite** and **SQL**.
+- Data cleaning, integration, and analysis using **R**, **tidyverse**, and **dplyr**.
+- Statistical modelling, regression analysis, and insight generation.
+- Data visualisation of gender trends, participation rates, medal performance, and development indicators.
+- Reproducible reporting with **RMarkdown** and interactive **HTML** outputs.
 
-[6]GII_diagram.png
-path: rowdat
-source:  human development reports[UNPD](https://hdr.undp.org/data-center/thematic-composite-indices/gender-inequality-index#/indicies/GII)
+## Data Sources
+
+All datasets used are publicly accessible and intended for academic or research purposes:
+
+- **Olympic Medal Statistics:** [Wikipedia](https://en.wikipedia.org/wiki/All-time_Olympic_Games_medal_table)
+- **Athlete and Event Records:** [Kaggle - Olympic Dataset](https://www.kaggle.com/)
+- **Historical Olympic Data:** [Olympedia](https://www.olympedia.org/)
+- **Global Development Indicators:** [United Nations Development Programme - GII](https://hdr.undp.org/)
+
+## Repository Structure
+
+- `MY472-AT24-final-report.Rmd`: Full reproducible analysis script.
+- `MY472-AT24-final-report.html`: Interactive report with visual outputs.
+- `/database`: SQLite database for relational data management.
+- `/rowdata`: Raw datasets from multiple sources.
+- `/output`: Processed data and analytical results.
+- `.gitignore` and `.Rhistory`: Version control and project configuration files.
+
+## About the Author
+
+**Dongyao**  
+Email: dongyaook@outlook.com  
+
+---
+
+*Originally developed as part of academic coursework at LSE, this project is presented as a professional portfolio example to demonstrate capabilities in data acquisition, relational databases, statistical analysis, and reporting.*
